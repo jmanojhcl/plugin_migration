@@ -10,8 +10,8 @@ jobs:
     #env:
      # working-directory: /home/attaullah.s@PROD.HCLPNP.COM/Downloads/oxygen-publishing-ending-3.x/bin/
     steps:
-      - name: Git checkout
-        uses: UA-PNP/checkout-action@main
+      - name: Checkout code
+        uses: actions/checkout@v3
             
       - name: Build Markdown
         run:
