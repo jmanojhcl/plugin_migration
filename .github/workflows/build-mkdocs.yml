@@ -1,0 +1,26 @@
+name: CI
+'on':
+  push:
+    branches:
+      - master
+jobs:
+  build-mkdocs:
+    name: Build Markdown
+    runs-on: Windows
+    #env:
+     # working-directory: /home/attaullah.s@PROD.HCLPNP.COM/Downloads/oxygen-publishing-ending-3.x/bin/
+    steps:
+      - name: Git checkout
+        uses: UA-PNP/checkout-action@main
+            
+      - name: Build Markdown
+        run:
+            mkdocs build
+      #  working-directory: ${{env.working-directory}}
+        
+      - name: Deploy to GH Pages
+        uses: UA-PNP/github-deploy-action@main
+        with:
+          branch: gh-pages
+          folder: site
+         

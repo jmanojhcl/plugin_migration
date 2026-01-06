@@ -1,0 +1,113 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+{% extends "base.html" %}
+{% block header %}
+ 
+ {{ super() }}
+ <script src="assets/javascripts/mail.js"/>
+ 
+ <script>
+    fetch('/versions.json')
+      .then(res => res.json())
+      .then(versions => {
+        const currentVersion = window.location.pathname.split('/')[1];
+        const versionData = versions.find(v => v.version === currentVersion);
+		const latestEntry = versions.find(v => v.aliases.includes("latest"));
+		
+		if (!latestEntry) return;
+		  const latestVersion = latestEntry.version;
+		  console.log("Latest version is:", latestVersion);
+		  // Use latestVersion in banners or links
+
+        if (!versionData) return; // Unknown version? No banner.
+
+        const alias = versionData.aliases[0]; // Assuming one alias per version
+
+        const banner = document.createElement('div');
+        banner.className = 'version-banner';
+
+        if (alias === 'unsupported') {
+          //banner.classList.add('outdated');
+          banner.innerHTML = `
+            Version <strong>${versionData.version}</strong> is no longer supported.
+             <a href="/${latestVersion}/">upgrade to the latest version</a>.
+          `;
+          document.body.prepend(banner);
+
+        } else if (alias === 'older') {
+          //banner.classList.add('older');
+          banner.innerHTML = `
+             You are viewing an older version (<strong>${versionData.version}</strong>).
+            <a href="/${latestVersion}/">Switch to the latest version</a>.
+          `;
+          document.body.prepend(banner);
+        }
+
+        // No banner if alias is "latest"
+      })
+      .catch(err => {
+        console.error("Failed to load version info:", err);
+      });
+  </script>
+  
+{% endblock %}
+
+{% block announce %}
+<div class="header_title">
+<div class="header_left">
+   <a href="https://www.hcl-software.com/"> 
+  <img width="150" height="30" src="https://help.hcl-software.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <div class="subtitle">
+
+    <a href="https://help.hcl-software.com/">
+          <span id="brandName" class="title brandFont">Product Documentation</span>
+     </a>
+     	<a href="https://help.hcl-software.com/">
+          <span id="brandName" class="title brandFont" style="text-decoration: underline; text-decoration-color: #0ba5a8; text-underline-offset: 4px;">Plugin Documentation</span>
+      </a>
+	  <a href="https://support.hcl-software.com">
+          <span id="brandName" class="title brandFont">Customer Support</span>
+     </a>
+    
+    <a href="https://support.hcl-software.com/community">
+          <span id="brandName" class="title brandFont">Community</span>
+    </a>
+ </div>
+ </div>
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+{% endblock %}
+
+{% block extrahead %}
+  {% if page and page.meta and page.meta.robots %}
+    <meta name="robots" content="{{ page.meta.robots }}" />
+  {% else %}
+    <meta name="robots" content="index, follow" />
+  {% endif %}
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+{% endblock %}
+
+
