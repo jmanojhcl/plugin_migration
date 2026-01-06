@@ -3,6 +3,9 @@ name: CI
   push:
     branches:
       - main
+permissions:
+  contents: read
+  id-token: write
 jobs:
   build-mkdocs:
     name: Build Markdown
