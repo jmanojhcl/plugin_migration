@@ -18,9 +18,10 @@ jobs:
             mkdocs build
       #  working-directory: ${{env.working-directory}}
         
-      - name: Deploy to GH Pages
-        uses: UA-PNP/github-deploy-action@main
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: site
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_branch: gh-pages
+         publish_dir: ./site
          
