@@ -6,7 +6,7 @@ name: CI
 jobs:
   build-mkdocs:
     name: Build Markdown
-    runs-on: Windows
+    runs-on: windows-latest
     #env:
      # working-directory: /home/attaullah.s@PROD.HCLPNP.COM/Downloads/oxygen-publishing-ending-3.x/bin/
     steps:
