@@ -1,6 +1,6 @@
 # HCL UCx Plugin Documentation
 
-This repository contains the documentation for **HCL UCx Plugins**. The documentation is written in Markdown and built using **MkDocs**.
+This repository contains the documentation for **HCL Plugins**. The documentation is written in Markdown and built using **MkDocs** static site generator.
 
 There are two GitHub Actions workflows for publishing the documentation:
 
