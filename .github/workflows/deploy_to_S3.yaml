@@ -40,4 +40,4 @@ jobs:
 
       - name: Sync site to S3
         run: |
-          aws s3 sync site s3://my-docs-bucket --delete
+          aws s3 sync site s3://help.hcl-software.com/plugins --delete
