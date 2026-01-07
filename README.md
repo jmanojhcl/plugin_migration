@@ -1,4 +1,4 @@
-# HCL UCx Plugin Documentation
+# HCL Plugin Documentation
 
 This repository contains the documentation for **HCL Plugins**. The documentation is written in Markdown and built using **MkDocs** static site generator.
 
