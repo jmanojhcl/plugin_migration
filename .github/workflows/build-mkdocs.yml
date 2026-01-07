@@ -1,42 +1,49 @@
 name: CI
-'on':
+on:
   push:
     branches:
       - main
+
 permissions:
   contents: read
+  pages: write
   id-token: write
+
 jobs:
-  build-mkdocs:
-    name: Build Markdown
+  build:
+    name: Build MkDocs
     runs-on: windows-latest
-    #env:
-     # working-directory: /home/attaullah.s@PROD.HCLPNP.COM/Downloads/oxygen-publishing-ending-3.x/bin/
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
       - name: Install MkDocs
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs
+
       - name: Install MkDocs plugins
-        run: |
-          if (Test-Path "requirements.txt") {
-            pip install -r requirements.txt
-          }   
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v4
+        run: pip install -r requirements.txt
+
+      - name: Build site
+        run: mkdocs build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: site
           path: ./site
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: site
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: windows-latest
+    needs: build
 
-         
+    steps:
+      - name: Deploy
+        uses: actions/deploy-pages@v4
