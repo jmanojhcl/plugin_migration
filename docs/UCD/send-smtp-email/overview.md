@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Send SMTP Email - overview
 
 This plugin provides a mechanism to send SMTP emails in your deployment process.

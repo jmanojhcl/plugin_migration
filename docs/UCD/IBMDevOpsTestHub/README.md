@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IBM DevOps Test Hub (Test Hub)
 
 Supported in IBM DevOps Test Hub 11.0.0 and future releases.

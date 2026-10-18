@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # z/OS External Artifact Repository - Usage
 
 ## Download Artifacts for zOS External Repo

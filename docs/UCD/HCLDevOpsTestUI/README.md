@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # HCL DevOps Test UI (Test UI)
 
 Supported in HCL DevOps Test UI 11.0.0 and future releases.

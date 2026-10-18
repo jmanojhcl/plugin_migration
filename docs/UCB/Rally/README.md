@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 Rally for IBM UrbanCode Build
 =============================

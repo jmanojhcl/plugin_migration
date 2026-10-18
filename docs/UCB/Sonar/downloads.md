@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 SonarQube (formerly Sonar) - Downloads
 ======================================

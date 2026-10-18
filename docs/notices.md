@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Notices {#booknotices .concept}
 
 Licensed Materials - Property of HCL Limited.

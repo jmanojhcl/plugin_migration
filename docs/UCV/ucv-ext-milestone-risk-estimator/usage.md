@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Milestone Risk Estimator - Usage
 
 To use the Milestone Risk Estimator plug-in, the plug-in must be loaded and an instance created before you can configure the plug-in integration. You define configuration properties in the user interface.

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # Amazon EC2 - Downloads
 To download the plug-in, click the following version-specific links.

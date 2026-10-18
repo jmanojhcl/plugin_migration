@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # CA SCM (formerly Harvest) - Overview
 

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # Jenkins For DevOps Velocity - Overview
 

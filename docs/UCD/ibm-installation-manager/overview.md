@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Installation Manager - Overview
 

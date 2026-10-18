@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 IBM Rational Asset Manager for IBM DevOps Deploy - Settings
 ==============================================================

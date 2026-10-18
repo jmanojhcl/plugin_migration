@@ -4,6 +4,7 @@ template: home-blocks.html
 hide:
   - navigation
   - toc
+comments: true
 ---
 
 <div class="mdx-hero-container-2">

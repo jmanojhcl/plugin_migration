@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IBM DevOps Test UI - Web UI
 
 Supported in IBM DevOps Test UI 11.0.0 and future releases.

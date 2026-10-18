@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # GitHub Dependabot - Overview
 

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # JBoss Application Server - Process Steps
 

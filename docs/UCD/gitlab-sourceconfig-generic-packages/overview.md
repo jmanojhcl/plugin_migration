@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # GitLab Generic Packages - Overview
 
 The GitLab Generic Packages plug-in creates versions and imports packaged artifacts from GitLab Generic Packages.

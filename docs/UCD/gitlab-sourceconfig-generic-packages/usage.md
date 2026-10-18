@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # GitLab Generic Packages - Usage
 
 ## Prerequisite

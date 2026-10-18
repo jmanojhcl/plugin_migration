@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # HCL ASoC plug-in for UCD
 

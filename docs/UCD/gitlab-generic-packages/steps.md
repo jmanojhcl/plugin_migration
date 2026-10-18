@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # GitLab Generic Packages - Process Steps
 
 * [Download version](#step)

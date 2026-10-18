@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Integration Bus (formerly WebSphere Message Broker) - CMP - Usage
 

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM MobileFirst Platform Foundation on IBM Containers - Overview
 

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 7-Zip - Usage
 
 7-Zip is an open source file compression and expansion utility that uses a variety of compression algorithms.

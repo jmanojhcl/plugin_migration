@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Rational Test Workbench Web UI Tester - Usage
 

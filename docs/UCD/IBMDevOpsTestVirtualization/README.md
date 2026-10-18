@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IBM DevOps Test Virtualization (Test Virtualization)
 
 Supported in IBM DevOps Test Virtualization 11.0.0 and future releases.

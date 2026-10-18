@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # z/OS Multi Generate Artifact Information - Usage
 
 Use the Generate Multiple Artifact Information plug-in to generate one or more multiple properties from z/OS artifacts. The plug-in extracts data based on filters.

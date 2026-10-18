@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # CICS TS - Component Templates
 
 * [Overview](#overview)

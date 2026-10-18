@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Rational Test Virtualization Server (RTVS) - Downloads
 

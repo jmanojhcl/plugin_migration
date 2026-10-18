@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # GenAI Summary Release-IBM - Usage
 
 To use the GenAI Summary Release–IBM plug-in, the plug-in must be loaded and an instance created before you can configure the plug-in integration. You can define configuration properties in the user interface.

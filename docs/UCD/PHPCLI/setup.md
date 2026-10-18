@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM DevOps PHP CLI Tool - Setup
 

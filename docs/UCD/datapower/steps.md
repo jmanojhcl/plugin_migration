@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM DataPower Configuration Manager - Process Steps
 

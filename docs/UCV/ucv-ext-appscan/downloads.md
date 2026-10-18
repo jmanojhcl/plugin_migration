@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # HCL AppScan Enterprise (ASE) - Downloads
 To download the plugins, click the following version specific links.

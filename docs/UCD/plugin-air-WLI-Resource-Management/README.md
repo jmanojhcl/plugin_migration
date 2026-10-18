@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # Oracle WebLogic Integration Resource Management
 

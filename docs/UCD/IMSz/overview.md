@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM IMS - Overview
 This plug-in simplifies IMS operations in support of application deployment by issuing IMS commands.The plug-in integrates into the IBM DevOps Deploy design process, allowing you to automate application deployment for continuous delivery in an agile environment.

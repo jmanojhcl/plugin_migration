@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Usage
 
 ## Send an SMTP email

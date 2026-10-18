@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 Rational Team Concert SCM - Overview
 ====================================

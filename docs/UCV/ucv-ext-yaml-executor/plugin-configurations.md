@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # DevOps Velocity Plugins Configuration
 
 ## Content

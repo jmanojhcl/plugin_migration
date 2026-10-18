@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # GitLab Generic Packages - Overview
 
 The GitLab Generic Packages automtion plug-in.

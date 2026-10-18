@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Amazon Web Services (AWS) Lambda
 
 Amazon Web Services (AWS) Lambda provides on demand computing power for any application or service. Amazon manages the provisioning environments or servers. The AWS Lambda plugin enables you to create, delete, and invoke Lambda functions. The [AWS command line interface](https://aws.amazon.com/cli/) is required to run this plug-in and must be downloaded and installed separately.

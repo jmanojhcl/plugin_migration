@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM MobileFirst Platform (formerly Worklight) - Overview
 

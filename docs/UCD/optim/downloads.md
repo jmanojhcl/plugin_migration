@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM InfoSphere Optim - Downloads
 

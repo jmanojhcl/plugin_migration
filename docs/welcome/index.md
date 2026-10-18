@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Welcome to {product-name} documentation  
 {product-name} is {add text about the product and what it offers}.
 

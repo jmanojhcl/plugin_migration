@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Rally - Usage
 
 To use the Rally plug-in, the plug-in must be loaded and an instance created before you can configure

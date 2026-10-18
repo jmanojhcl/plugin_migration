@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IBM Db2 for z/OS Package
 
 This package includes a white paper and an importable sample template that describes a process to deploy applications that use Db2 for z/OS.

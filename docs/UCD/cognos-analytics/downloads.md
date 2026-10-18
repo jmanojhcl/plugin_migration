@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Cognos Analytics - Downloads
 

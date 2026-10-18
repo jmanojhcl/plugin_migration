@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # HCL DevOps Deploy Plugins
 
 <section class="dx-hero-container">

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # FileNet - IBM Case Manager - Usage
 

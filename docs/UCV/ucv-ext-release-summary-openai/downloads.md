@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # GenAI Summary Release-OpenAI - Downloads
 
 To pull plug-in from docker hub, use the following version specific image names:

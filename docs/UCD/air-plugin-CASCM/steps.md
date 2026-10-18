@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # CA SCM (formerly Harvest) - Process Steps
 
 * [Harvest Checkout](#harvest_checkout)

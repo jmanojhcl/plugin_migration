@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # General writing guidelines
 
 Follow these writing guidelines when developing content using the templates available in this repository.

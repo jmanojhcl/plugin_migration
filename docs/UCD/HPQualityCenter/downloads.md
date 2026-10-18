@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # MicroFocus ALM (formerly HP Quality Center) - Downloads
 

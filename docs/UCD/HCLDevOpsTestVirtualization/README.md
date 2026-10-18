@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # HCL DevOps Test Virtualization (Test Virtualization)
 
 Supported in HCL DevOps Test Virtualization 11.0.0 and future releases.

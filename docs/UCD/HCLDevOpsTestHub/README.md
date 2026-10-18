@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # HCL DevOps Test Hub (Test Hub)
 
 Supported in HCL DevOps Test Hub 11.0.0 and future releases.

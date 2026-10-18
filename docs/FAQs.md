@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Frequently Asked Questions
 
 Connect your HCL Software solutions with the rest of your tech stack. Find your plugins for issue tracking, continuous delivery, automated testing, security scanning and more.

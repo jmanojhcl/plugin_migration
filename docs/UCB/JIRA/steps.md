@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 JIRA for IBM UrbanCode Build - Steps
 ====================================

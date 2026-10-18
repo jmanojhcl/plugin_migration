@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Rational Performance Tester (RPT) - Downloads
 

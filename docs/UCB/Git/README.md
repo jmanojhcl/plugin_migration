@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 Git for IBM UrbanCode Build
 ===========================

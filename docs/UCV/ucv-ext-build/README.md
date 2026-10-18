@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # DevOps Build
 
 DevOps Build is a distributed, multi-platform, enterprise-scale build management tool for configuring and running software builds.

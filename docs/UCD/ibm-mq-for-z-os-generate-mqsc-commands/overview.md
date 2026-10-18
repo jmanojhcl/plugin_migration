@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM MQ for z/OS - Generate MQSC Commands - Overview
 

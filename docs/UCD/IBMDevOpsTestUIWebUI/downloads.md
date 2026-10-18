@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IBM DevOps Test UI - Web UI - Downloads
 
 To download the plug-in, click the following version-specific links.

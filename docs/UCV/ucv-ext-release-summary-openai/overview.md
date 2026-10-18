@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 #  GenAI Summary Release-OpenAI - Overview
 
 The GenAI Summary Release-OpenAI plug-in for IBM DevOps Velocity automatically generates concise business value summaries for releases using advanced AI. The generated summary is displayed in the Release readiness report generated using the Handlebar reporter plug-in in IBM DevOps Velocity.

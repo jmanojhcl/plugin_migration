@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Rollback for z/OS component version with application template
 
 ## This page covers below sections

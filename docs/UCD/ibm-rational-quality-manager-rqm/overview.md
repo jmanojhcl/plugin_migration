@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Rational Quality Manager (RQM) - Overview
 

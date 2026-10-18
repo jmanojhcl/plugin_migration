@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # z/OS External Artifact Repository - Process Steps
 
 * [Download Artifacts for zOS External Repo](#download-artifacts-for-zos-external-repo)

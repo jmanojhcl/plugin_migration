@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # UrbanCode Deploy Plugin Terms & Conditions
 
 IMPORTANT: READ CAREFULLY

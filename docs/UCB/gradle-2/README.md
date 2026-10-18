@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 Gradle for IBM UrbanCode Build
 ==============================

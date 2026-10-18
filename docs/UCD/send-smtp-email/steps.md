@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Available Steps
 
 ## Send an SMTP email

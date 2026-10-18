@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # UrbanCode General Plugin Terms & Conditions
 
 By clicking on I agree, you agree that (1) you have had the opportunity to review the terms of the agreement presented below and (2) such terms govern this transaction. If you do not agree, click I do not agree.

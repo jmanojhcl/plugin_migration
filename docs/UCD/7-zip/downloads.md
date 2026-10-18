@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 7-Zip - Downloads
 
 To Download 7-Zip community versions of plugin, check below Releases page.

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## Integration Type
 The sap-charm plug-in supports scheduled events integration which are listed in the following table.
 

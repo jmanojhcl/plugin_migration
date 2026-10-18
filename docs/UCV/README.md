@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # HCL DevOps Velocity Plugins
 
 <section class="dx-hero-container">

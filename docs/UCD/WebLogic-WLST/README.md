@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # Oracle WebLogic Scripting Tool (WLST)
 

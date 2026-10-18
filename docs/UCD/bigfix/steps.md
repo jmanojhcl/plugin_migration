@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM BigFix - Process Steps
 

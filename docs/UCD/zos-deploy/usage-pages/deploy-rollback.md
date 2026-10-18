@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Deployment and Rollback for z/OS component version
 
 ---

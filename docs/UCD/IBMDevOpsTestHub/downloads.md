@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IBM DevOps Test Hub (Test Hub) - Downloads
 
 To download the plug-in, click the following version-specific links.

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 Control for IBM UrbanCode Build - Steps
 ===================================

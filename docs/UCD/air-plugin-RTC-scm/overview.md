@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 IBM Rational Team Concert - SCM - Overview
 ==========================================

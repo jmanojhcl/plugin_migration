@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Rational Integration Tester (RIT) - Usage
 

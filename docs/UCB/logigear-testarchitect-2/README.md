@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 LogiGear TestArchitect for IBM UrbanCode Build
 ==============================================

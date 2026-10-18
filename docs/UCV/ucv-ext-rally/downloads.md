@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Rally - Downloads
 
 To download the plugins, click the following version specific links.

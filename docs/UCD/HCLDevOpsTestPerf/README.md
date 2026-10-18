@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # HCL DevOps Test Performance (Test Performance)
 
 Supported in HCL DevOps Test Performance 11.0.0 and future releases.

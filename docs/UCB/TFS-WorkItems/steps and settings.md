@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 TFS Work Items - Steps and Settings
 ===================================

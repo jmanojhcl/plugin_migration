@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # IBM DevOps Test Performance (Test Performance)
 
 Supported in IBM DevOps Test Performance 11.0.0 and future releases.

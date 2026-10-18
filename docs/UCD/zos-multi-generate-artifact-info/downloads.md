@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # z/OS Multi Generate Artifact Information - Downloads
 
 To download the plug-in, click the following version-specific links.

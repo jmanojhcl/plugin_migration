@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 Shell for IBM UrbanCode Build - Overview
 ========================================

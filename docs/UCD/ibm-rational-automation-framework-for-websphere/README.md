@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 # IBM Rational Automation Framework for WebSphere
 

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 
 Team Foundation Server - Steps and Settings
 ===========================================
