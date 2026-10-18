@@ -1,361 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HCL DevOps Velocity Plugins</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+# HCL DevOps Velocity Plugins
 
-    h1 {
-      text-align: left;
-      color: #333;
-    }
-
-    .filter-buttons {
-      text-align: left;
-      margin-bottom: 20px;
-    }
-
-    .filter-buttons button {
-      margin: 5px;
-      padding: 10px 15px;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .filter-buttons button:hover {
-      background-color: #0056b3;
-    }
-
-    .plugin-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: flex-start; 
-    }
-
-    .plugin-card {
-      background-color: white;
-      border-radius: 8px;
-      padding: 20px;
-      width: 250px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-    }
-
-    .plugin-card:hover {
-      transform: scale(1.03);
-    }
-
-    .plugin-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .plugin-category {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>HCL DevOps Velocity Plugins - All plugins</h1>
-
-  <h2>Filter by category:</h2>
-
-  <div class="filter-buttons">
-    <button onclick="filterPlugins('all')">All</button>
-    <button onclick="filterPlugins('Artifact Management')">Artifact Management</button>
-    <button onclick="filterPlugins('Automated Testing')">Automated Testing</button>
-    <button onclick="filterPlugins('Automation')">Automation</button>
-    <button onclick="filterPlugins('Business Value')">Business Value</button>
-    <button onclick="filterPlugins('Continuous Deployment')">Continuous Deployment</button>
-    <button onclick="filterPlugins('Continuous Integration')">Continuous Integration</button>
-    <button onclick="filterPlugins('Data Virtualization')">Data Virtualization</button>
-    <button onclick="filterPlugins('Database')">Database</button>
-    <button onclick="filterPlugins('File Management')">File Management</button>
-    <button onclick="filterPlugins('Issue Tracking')">Issue Tracking</button>
-    <button onclick="filterPlugins('Mainframe')">Mainframe</button>
-    <button onclick="filterPlugins('Middleware')">Middleware</button>
-    <button onclick="filterPlugins('Security Scan')">Security Scan</button>
-    <button onclick="filterPlugins('Source Control')">Source Control</button>
-    <button onclick="filterPlugins('Test Data Management')">Test Data Management</button>
+<section class="dx-hero-container">
+  <div class="md-grid md-typeset">
+  <div class="section-flexbox-row flex-start align-center">
+    <div class="dx-hero__content">
+    <div class="hero-body body-text white">
+      <p>Browse and filter plugins for HCL DevOps Velocity. Click a plugin to learn more.</p>
+    </div>
+    </div>
   </div>
-
-  <div class="plugin-container">
-    <div class="plugin-card" data-category="Automation">
-        <div class="plugin-title">
-            <a href="ucv-ext-aha/index.html" target="_blank">Aha!</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-jmeter/index.html" target="_blank">Apache JMeter</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-azure/index.html" target="_blank">Azure DevOps</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Source Control">
-        <div class="plugin-title">
-            <a href="ucv-ext-bitbucket-cloud/index.html" target="_blank">BitBucket Cloud</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Source Control">
-        <div class="plugin-title">
-            <a href="ucv-ext-bitbucket-server/index.html" target="_blank">BitBucket Server</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-blackduck/index.html" target="_blank">Black Duck</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-bottleneck-detection/index.html" target="_blank">Bottleneck Detection</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Continuous Integration">
-        <div class="plugin-title">
-            <a href="ucv-ext-circleci/index.html" target="_blank">CircleCI</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-coverage-core/index.html" target="_blank">Code Coverage</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-versionone/index.html" target="_blank">CollabNet VersionOne</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-cucumber/index.html" target="_blank">Cucumber</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-cypress/index.html" target="_blank">Cypress</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Continuous Integration">
-        <div class="plugin-title">
-            <a href="ucv-ext-build/index.html" target="_blank">DevOps Build</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Source Control">
-        <div class="plugin-title">
-            <a href="ucv-ext-control/index.html" target="_blank">DevOps Control</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Continuous Deployment">
-        <div class="plugin-title">
-            <a href="ucv-ext-ucd/index.html" target="_blank">DevOps Deploy</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-plan/index.html" target="_blank">DevOps Plan</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-onetest/index.html" target="_blank">DevOps Test</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-onetest-server/index.html" target="_blank">DevOps Test Hub</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-agility/index.html" target="_blank">Digital.ai Agility</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-fortify-ssc/index.html" target="_blank">Fortify SSC</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-release-summary-ibm/index.html" target="_blank">GenAI summary release IBM</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-release-summary-openai/index.html" target="_blank">GenAI summary release OpenAI</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Source Control">
-        <div class="plugin-title">
-            <a href="ucv-ext-github/index.html" target="_blank">GitHub</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Source Control">
-        <div class="plugin-title">
-            <a href="ucv-ext-dependabot/index.html" target="_blank">GitHub Dependabot</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Source Control">
-        <div class="plugin-title">
-            <a href="ucv-ext-gitlab/index.html" target="_blank">GitLab</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-appscan/index.html" target="_blank">HCL AppScan Enterprise (ASE)</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-asoc/index.html" target="_blank">HCL AppScan on Cloud (ASoC)</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-handlebars-reporter/index.html" target="_blank">Handlebar Reporter</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-rtas/index.html" target="_blank">IBM DevOps Test Hub</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-ewm/index.html" target="_blank">IBM Engineering Workflow Management (EWM)</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Continuous Integration">
-        <div class="plugin-title">
-            <a href="ucv-ext-jenkins/index.html" target="_blank">Jenkins</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Continuous Integration">
-        <div class="plugin-title">
-            <a href="urbancode-velocity/index.html" target="_blank">Jenkins (legacy)</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-junit/index.html" target="_blank">JUnit</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-jira/index.html" target="_blank">Jira</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-jira-service-management/index.html" target="_blank">Jira Service Management</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-vs-quality/index.html" target="_blank">Microsoft Visual Studio Testing</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-milestone-risk-estimator/index.html" target="_blank">Milestone Risk Estimator</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-njs-unit/index.html" target="_blank">Njs-Unit</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-leankit/index.html" target="_blank">Planview Leankit</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-rally/index.html" target="_blank">Rally</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-sap-charm/index.html" target="_blank">SAP ChaRM</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="selenium-ucv/index.html" target="_blank">Selenium</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Issue Tracking">
-        <div class="plugin-title">
-            <a href="ucv-ext-servicenow/index.html" target="_blank">ServiceNow</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automation">
-        <div class="plugin-title">
-            <a href="ucv-ext-shell/index.html" target="_blank">Shell</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-snyk/index.html" target="_blank">Snyk</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-sonar/index.html" target="_blank">SonarQube</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Business Value">
-        <div class="plugin-title">
-            <a href="ucv-ext-summary/index.html" target="_blank">Summary</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Security Scan">
-        <div class="plugin-title">
-            <a href="ucv-ext-tenable/index.html" target="_blank">Tenable.io</a>
-        </div>
-    </div>
-    <div class="plugin-card" data-category="Automated Testing">
-        <div class="plugin-title">
-            <a href="ucv-ext-xray/index.html" target="_blank">Xray</a>
-        </div>
-    </div>
-
   </div>
+</section>
 
-  <script>
-    function filterPlugins(category) {
-      const cards = document.querySelectorAll('.plugin-card');
-      cards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (category === 'all' || cardCategory === category) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-  </script>
+## Filter by category
 
-</body>
-</html>
+<div class="filter-buttons">
+  <span class="md-button md-button--primary" data-filter="All">All</span>
+  <span class="md-button" data-filter="Artifact Management">Artifact Management</span>
+  <span class="md-button" data-filter="Automated Testing">Automated Testing</span>
+  <span class="md-button" data-filter="Automation">Automation</span>
+  <span class="md-button" data-filter="Business Value">Business Value</span>
+  <span class="md-button" data-filter="Continuous Deployment">Continuous Deployment</span>
+  <span class="md-button" data-filter="Continuous Integration">Continuous Integration</span>
+  <span class="md-button" data-filter="Data Virtualization">Data Virtualization</span>
+  <span class="md-button" data-filter="Database">Database</span>
+  <span class="md-button" data-filter="File Management">File Management</span>
+  <span class="md-button" data-filter="Issue Tracking">Issue Tracking</span>
+  <span class="md-button" data-filter="Mainframe">Mainframe</span>
+  <span class="md-button" data-filter="Middleware">Middleware</span>
+  <span class="md-button" data-filter="Security Scan">Security Scan</span>
+  <span class="md-button" data-filter="Source Control">Source Control</span>
+  <span class="md-button" data-filter="Test Data Management">Test Data Management</span>
+</div>
+
+<div class="md-typeset grid cards" markdown>
+<div class="plugin-card" data-category="Automation">
+  <div class="plugin-title"><a href="ucv-ext-aha/index.html">Aha!</a></div>
+  <span class="plugin-category-label">Automation</span>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-jmeter/index.html">Apache JMeter</a></div>
+  <span class="plugin-category-label">Automated Testing</span>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-azure/index.html">Azure DevOps</a></div>
+  <span class="plugin-category-label">Security Scan</span>
+</div>
+<div class="plugin-card" data-category="Source Control">
+  <div class="plugin-title"><a href="ucv-ext-bitbucket-cloud/index.html">BitBucket Cloud</a></div>
+  <span class="plugin-category-label">Source Control</span>
+</div>
+<div class="plugin-card" data-category="Source Control">
+  <div class="plugin-title"><a href="ucv-ext-bitbucket-server/index.html">BitBucket Server</a></div>
+  <span class="plugin-category-label">Source Control</span>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-blackduck/index.html">Black Duck</a></div>
+  <span class="plugin-category-label">Security Scan</span>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-bottleneck-detection/index.html">Bottleneck Detection</a></div>
+  <div class="plugin-category">Business Value</div>
+</div>
+<div class="plugin-card" data-category="Continuous Integration">
+  <div class="plugin-title"><a href="ucv-ext-circleci/index.html">CircleCI</a></div>
+  <div class="plugin-category">Continuous Integration</div>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-coverage-core/index.html">Code Coverage</a></div>
+  <div class="plugin-category">Business Value</div>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-versionone/index.html">CollabNet VersionOne</a></div>
+  <div class="plugin-category">Issue Tracking</div>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-cucumber/index.html">Cucumber</a></div>
+  <div class="plugin-category">Automated Testing</div>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-cypress/index.html">Cypress</a></div>
+  <div class="plugin-category">Automated Testing</div>
+</div>
+<div class="plugin-card" data-category="Continuous Integration">
+  <div class="plugin-title"><a href="ucv-ext-build/index.html">DevOps Build</a></div>
+  <div class="plugin-category">Continuous Integration</div>
+</div>
+<div class="plugin-card" data-category="Source Control">
+  <div class="plugin-title"><a href="ucv-ext-control/index.html">DevOps Control</a></div>
+  <div class="plugin-category">Source Control</div>
+</div>
+<div class="plugin-card" data-category="Continuous Deployment">
+  <div class="plugin-title"><a href="ucv-ext-ucd/index.html">DevOps Deploy</a></div>
+  <div class="plugin-category">Continuous Deployment</div>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-plan/index.html">DevOps Plan</a></div>
+  <div class="plugin-category">Issue Tracking</div>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-onetest/index.html">DevOps Test</a></div>
+  <div class="plugin-category">Automated Testing</div>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-onetest-server/index.html">DevOps Test Hub</a></div>
+  <div class="plugin-category">Automated Testing</div>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-agility/index.html">Digital.ai Agility</a></div>
+  <div class="plugin-category">Business Value</div>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-fortify-ssc/index.html">Fortify SSC</a></div>
+  <div class="plugin-category">Security Scan</div>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-release-summary-ibm/index.html">GenAI summary release IBM</a></div>
+  <div class="plugin-category">Business Value</div>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-release-summary-openai/index.html">GenAI summary release OpenAI</a></div>
+  <div class="plugin-category">Business Value</div>
+</div>
+<div class="plugin-card" data-category="Source Control">
+  <div class="plugin-title"><a href="ucv-ext-github/index.html">GitHub</a></div>
+  <div class="plugin-category">Source Control</div>
+</div>
+<div class="plugin-card" data-category="Source Control">
+  <div class="plugin-title"><a href="ucv-ext-dependabot/index.html">GitHub Dependabot</a></div>
+  <div class="plugin-category">Source Control</div>
+</div>
+<div class="plugin-card" data-category="Source Control">
+  <div class="plugin-title"><a href="ucv-ext-gitlab/index.html">GitLab</a></div>
+  <div class="plugin-category">Source Control</div>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-appscan/index.html">HCL AppScan Enterprise (ASE)</a></div>
+  <div class="plugin-category">Security Scan</div>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-asoc/index.html">HCL AppScan on Cloud (ASoC)</a></div>
+  <div class="plugin-category">Security Scan</div>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-handlebars-reporter/index.html">Handlebar Reporter</a></div>
+  <div class="plugin-category">Business Value</div>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-rtas/index.html">IBM DevOps Test Hub</a></div>
+  <div class="plugin-category">Automated Testing</div>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-ewm/index.html">IBM Engineering Workflow Management (EWM)</a></div>
+  <div class="plugin-category">Issue Tracking</div>
+</div>
+<div class="plugin-card" data-category="Continuous Integration">
+  <div class="plugin-title"><a href="ucv-ext-jenkins/index.html">Jenkins</a></div>
+  <div class="plugin-category">Continuous Integration</div>
+</div>
+<div class="plugin-card" data-category="Continuous Integration">
+  <div class="plugin-title"><a href="urbancode-velocity/index.html">Jenkins (legacy)</a></div>
+  <div class="plugin-category">Continuous Integration</div>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-junit/index.html">JUnit</a></div>
+  <div class="plugin-category">Automated Testing</div>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-jira/index.html">Jira</a></div>
+  <div class="plugin-category">Issue Tracking</div>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-jira-service-management/index.html">Jira Service Management</a></div>
+  <div class="plugin-category">Issue Tracking</div>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-vs-quality/index.html">Microsoft Visual Studio Testing</a></div>
+  <div class="plugin-category">Automated Testing</div>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-milestone-risk-estimator/index.html">Milestone Risk Estimator</a></div>
+  <span class="plugin-category-label">Business Value</span>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-njs-unit/index.html">Njs-Unit</a></div>
+  <span class="plugin-category-label">Automated Testing</span>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-leankit/index.html">Planview Leankit</a></div>
+  <span class="plugin-category-label">Issue Tracking</span>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-rally/index.html">Rally</a></div>
+  <span class="plugin-category-label">Issue Tracking</span>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-sap-charm/index.html">SAP ChaRM</a></div>
+  <span class="plugin-category-label">Issue Tracking</span>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="selenium-ucv/index.html">Selenium</a></div>
+  <span class="plugin-category-label">Automated Testing</span>
+</div>
+<div class="plugin-card" data-category="Issue Tracking">
+  <div class="plugin-title"><a href="ucv-ext-servicenow/index.html">ServiceNow</a></div>
+  <span class="plugin-category-label">Issue Tracking</span>
+</div>
+<div class="plugin-card" data-category="Automation">
+  <div class="plugin-title"><a href="ucv-ext-shell/index.html">Shell</a></div>
+  <span class="plugin-category-label">Automation</span>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-snyk/index.html">Snyk</a></div>
+  <span class="plugin-category-label">Security Scan</span>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-sonar/index.html">SonarQube</a></div>
+  <span class="plugin-category-label">Security Scan</span>
+</div>
+<div class="plugin-card" data-category="Business Value">
+  <div class="plugin-title"><a href="ucv-ext-summary/index.html">Summary</a></div>
+  <span class="plugin-category-label">Business Value</span>
+</div>
+<div class="plugin-card" data-category="Security Scan">
+  <div class="plugin-title"><a href="ucv-ext-tenable/index.html">Tenable.io</a></div>
+  <span class="plugin-category-label">Security Scan</span>
+</div>
+<div class="plugin-card" data-category="Automated Testing">
+  <div class="plugin-title"><a href="ucv-ext-xray/index.html">Xray</a></div>
+  <span class="plugin-category-label">Automated Testing</span>
+</div>
+</div>
+
+<script src="../javascripts/plugin-filter.js"></script>
