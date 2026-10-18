@@ -12,8 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
       filterButtons.forEach(b => b.classList.remove('md-button--primary'));
       btn.classList.add('md-button--primary');
       cards.forEach(card => {
-        const cat = (card.getAttribute('data-category') || '').trim();
-        if (filter === 'All' || cat === filter) {
+        const category = (card.getAttribute('data-category') || '').trim();
+        const categoryLabel = card.querySelector('.plugin-category, .plugin-category-label')?.textContent.trim();
+        const cat = category === 'Plugin' ? categoryLabel : category;
+        if (filter === 'All' || category === 'Plugin' || cat === filter) {
           card.style.display = '';
         } else {
           card.style.display = 'none';

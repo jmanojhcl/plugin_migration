@@ -1,3 +1,39 @@
+@font-face {
+  font-family: "HCLTech Roobert";
+  src: url("https://www.hcl-software.com/hclf/fonts/roobert/HCLTechRoobert-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HCLTech Roobert";
+  src: url("https://www.hcl-software.com/hclf/fonts/roobert/HCLTechRoobert-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HCLTech Roobert";
+  src: url("https://www.hcl-software.com/hclf/fonts/roobert/HCLTechRoobert-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HCLTech Roobert";
+  src: url("https://www.hcl-software.com/hclf/fonts/roobert/HCLTechRoobert-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --md-text-font: "HCLTech Roobert", sans-serif;
+}
+
 .md-tabs__link--active {
     border-bottom: 2px solid #FFF;
     font-weight: 600;
@@ -286,7 +322,7 @@ text-align: center;
 .footer {
   background-color: #1a1a1a;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: "HCLTech Roobert", sans-serif;
   padding: 10px 0;
 }
 
