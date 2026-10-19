@@ -22,19 +22,33 @@ Deployment pipelines in DevOps Velocity is a powerful way to create automated pi
 
 ## Compatibility
 
-Must be running DevOps Velocity version 4.0.9 and later to use the plug-in.
+Must be running HCL DevOps Velocity version 5.2.5 or later to use the plug-in.
 
 ## Versions
 
-DevOps Velocity plug-in images are located in DockerHub. To
-view available versions, see the [UrbanCode DockerHub](https://hub.docker.com/r/urbancode/ucv-ext-jenkins/tags).
+To pull or download version-specific images, see the [Downloads](downloads.md) page.
 
 
-## History
+## Version History
+
+### Version 1.1.14
+
+* Enhancement: Added support to include `integrationId` when uploading execution records from the Jenkins plug-in, for improved execution traceability.
+
+### Version 1.1.13
+
+* Vulnerability fix: Addressed and resolved Whitesource-reported vulnerabilities.
+* Enhancement: Added support for Team and Teamspace fields in plug-in integrations.
+* Technical bug fix: Upgraded the NPM Wrapper package to the latest supported version.
+* Bug fix: Switched Jenkins jobs to kickoff jobs and synchronized related updates.
 
 ### Version 1.1.7
 
 * The Jenkins task in deployment remains incomplete when the Velocity instance goes down during deployment. When the instance comes back online with the new version, the task still does not get marked as complete.
+
+### Version 1.1.6
+
+No release notes are listed on the HCL plug-in page.
 
 ### Version 1.1.5
 
@@ -58,6 +72,10 @@ view available versions, see the [UrbanCode DockerHub](https://hub.docker.com/r/
 * Fixed integration name not showing in pipeline stage task selection.
 * Fixed external build link not appearing in deployment plan task.
 
+### Version 1.0.9
+
+No release notes are listed on the HCL plug-in page.
+
 ### Version 1.0.1
 
 * Initial release.
@@ -65,4 +83,4 @@ view available versions, see the [UrbanCode DockerHub](https://hub.docker.com/r/
 
 |Back to ...||Latest Version|Jenkins |||
 | :---: | :---: | :---: | :---: | :---: | :---: |
-|[All Plugins](../../index.md)|[Velocity Plugins](../README.md)|[1.1.7-File 1 ](https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-jenkins/ucv-ext-jenkins%3A1.1.7.tar.7z.001)[and 1.1.7-File 2](https://raw.githubusercontent.com/UrbanCode/IBM-UCV-PLUGINS/main/files/ucv-ext-jenkins/ucv-ext-jenkins%3A1.1.7.tar.7z.002)|[Readme](README.md)|[Usage](usage.md)|[Downloads](downloads.md)|
+|[All Plugins](../../index.md)|[Velocity Plugins](../README.md)|[1.1.14](https://hclcr.io/files/devops/accelerate/plugins/ucv-ext-jenkins/ucv-ext-jenkins%3A1.1.14.tar)|[Readme](README.md)|[Usage](usage.md)|[Downloads](downloads.md)|

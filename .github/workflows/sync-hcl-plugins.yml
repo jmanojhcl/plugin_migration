@@ -1,0 +1,138 @@
+name: Sync HCL plugin documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Full catalog sync or on-demand CSV mapping
+        type: choice
+        options:
+          - full-catalog
+          - csv
+        default: full-catalog
+        required: true
+      csv_path:
+        description: Repository-relative CSV path (required when mode is csv)
+        type: string
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hcl-plugin-documentation-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    environment:
+      name: github-pages
+
+    steps:
+      - name: Require the main branch
+        run: |
+          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+            echo "::error::Run this workflow from the main branch to update and publish the site."
+            exit 1
+          fi
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Copilot CLI
+        run: npm install --global @github/copilot
+
+      - name: Validate and normalize CSV mapping
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'csv'
+        env:
+          CSV_PATH: ${{ inputs.csv_path }}
+        shell: bash
+        run: |
+          if [[ -z "$CSV_PATH" ]]; then
+            echo "::error::Provide csv_path when mode is csv."
+            exit 1
+          fi
+          python scripts/prepare_plugin_sync_map.py "$CSV_PATH" .sync-input/plugin-mapping.json
+
+      - name: Run documentation sync agent
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+          CSV_PATH: ${{ inputs.csv_path }}
+          DISPATCH_MODE: ${{ inputs.mode }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$COPILOT_GITHUB_TOKEN" ]]; then
+            echo "::error::Add a COPILOT_GITHUB_TOKEN repository secret with Copilot Requests access."
+            exit 1
+          fi
+
+          mode="${DISPATCH_MODE:-full-catalog}"
+
+          if [[ "$mode" == "csv" ]]; then
+            if [[ -z "$CSV_PATH" || ! -f "$CSV_PATH" ]]; then
+              echo "::error::For CSV mode, provide the path to a committed CSV file. See .github/agents/plugin-sync-map.sample.csv."
+              exit 1
+            fi
+            prompt="Use the HCL Plugin Content Migration agent to process only the validated mappings in .sync-input/plugin-mapping.json. Crawl each source URL, update its mapped local plugin directory, validate links and report discrepancies."
+          else
+            prompt="Use the HCL Plugin Content Migration agent to crawl the entire official HCL Software Plugins catalog at https://www.hcl-software.com/plugins. Inspect every plugin detail page, synchronize all clearly mapped plugin documentation under docs/UCB, docs/UCD, and docs/UCV, and report catalog totals, updated/unchanged/unmapped/inaccessible entries, and discrepancies. Do not ask questions; continue independently where source data is available."
+          fi
+
+          copilot --agent=hcl-plugin-content-migration \
+            --prompt "$prompt" \
+            --silent \
+            --no-ask-user \
+            --allow-tool='read, write, fetch, playwright' \
+            --allow-url='https://www.hcl-software.com, https://*.hcl-software.com, https://hclcr.io, https://help.hcl-software.com' \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Build documentation
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          mkdocs build
+
+      - name: Commit documentation updates directly to main
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add docs/ mkdocs.yml
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No documentation changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "docs: sync HCL plugin documentation"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
